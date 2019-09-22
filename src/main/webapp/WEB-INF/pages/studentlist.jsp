@@ -16,7 +16,7 @@
 			<td>${student.branch}</td>
 			<td>${student.sem}</td>
 			<td><a href="removestudent?id=${student.rno}">[Delete]</a></td>
-			<td><a href="updatestudent?id=${student.rno}">Update</a></td>
+			<td><a href="Update1?id=${student.rno}">Update</a></td>
 		</tr>
 	</c:forEach>
 	</table>

@@ -46,6 +46,13 @@ public class StudentController {
 		ModelAndView mv=new ModelAndView("redirect:viewall");
 		return mv;	
 	}
+	@RequestMapping("Update1")
+	public ModelAndView update1(@RequestParam("id") int code){
+		Student x=studentService.searchStudent(code);
+		ModelAndView mv=new ModelAndView("UpdateStudent");
+		mv.addObject("studentInfo", x);
+		return mv;	
+	}
 	
 	@RequestMapping("Remove")
 	public ModelAndView remove(){
@@ -74,12 +81,12 @@ public class StudentController {
 		return mv;
 	}
 	
-	@RequestMapping("updatestudent")
-	public ModelAndView updateStudent(@RequestParam("id") int code){
-		Student x=studentService.searchStudent(code);
-		studentService.updateStudent(x);
+	@RequestMapping("UpdateStudent")
+	public ModelAndView updateStudent(@ModelAttribute("student") Student student){
+		studentService.updateStudent(student);
 		ModelAndView mv=new ModelAndView("redirect:viewall");
 		return mv;
+		
 	}
 	
 	

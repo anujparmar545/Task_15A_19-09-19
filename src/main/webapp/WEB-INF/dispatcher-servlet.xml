@@ -11,10 +11,12 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 					http://www.springframework.org/schema/mvc/spring-mvc.xsd">	
 	
 	
+	
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
   			 <property name="prefix" value="/WEB-INF/pages/"/>
   			 <property name="suffix" value=".jsp"/>
 	</bean>
+	
 	
 	
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">

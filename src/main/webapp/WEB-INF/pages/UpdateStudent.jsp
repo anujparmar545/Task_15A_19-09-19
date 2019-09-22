@@ -1,3 +1,4 @@
+<%@page isELIgnored="false" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -13,13 +14,13 @@
                         							
                         							
                         							
-                        Id				<input type="text" name="id" placeholder="Enter Id"/>
+                        RNO				<input type="text" name="rno" readonly="readonly" value="${studentInfo.getRno()} "/>
                         
-                        Name				<input type="text" name="name" placeholder="Enter Name"/>
+                        Name				<input type="text" name="name" value="${studentInfo.getName()} "/>
                         
-                        Address				<input type="text" name="address" placeholder="Enter Address">
+                        Branch				<input type="text" name="branch" value="${studentInfo.getBranch()} ">
                         
-                        Mobile				<input type="text" name="mobile"  placeholder="Enter Mobile Number" >
+                        Sem				<input type="text" name="sem"  value="${studentInfo.getSem()} ">
                         
                         		
                         					<button type="submit" name="btnSignup"  ForeColor="Fuchsia">Update</button>
